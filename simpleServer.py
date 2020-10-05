@@ -1,7 +1,6 @@
-#test test
 from flask import Flask, send_file
 import RPi.GPIO as GPIO
-#from flask_socetio import socetIO
+from flask_socetio import socetIO
 
 led = 18
 
@@ -9,7 +8,7 @@ GPIO.setmode(GPIO.BCM)
 GPIO.setup(led, GPIO.OUT)
 
 app = Flask('lightControl')
-#socetio = socetIO(app)
+socetio = socetIO(app)
 
 
 @app.route('/')
